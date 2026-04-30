@@ -6,6 +6,10 @@
   "bin": {
     "orquestradev-signer-mcp": "./dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berkayoztunc/orquestra-signer-mcp"
+  },
   "publishConfig": {
     "access": "public"
   },
