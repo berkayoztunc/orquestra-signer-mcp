@@ -1,4 +1,4 @@
-# solana-keychain-mcp
+# @orquestradev/signer-mcp
 
 MCP server for signing Solana transactions and messages using any backend supported by [`@solana/keychain`](https://github.com/solana-foundation/solana-keychain).
 
@@ -9,7 +9,7 @@ One command to add to any MCP client:
   "mcpServers": {
     "solana-signer": {
       "command": "npx",
-      "args": ["-y", "solana-keychain-mcp"],
+      "args": ["-y", "@orquestradev/signer-mcp"],
       "env": {
         "KEYCHAIN_BACKEND": "memory",
         "KEYCHAIN_PRIVATE_KEY": "<your-base58-private-key>",
@@ -52,7 +52,7 @@ One command to add to any MCP client:
 Non-memory backends require their optional package to be installed alongside this package:
 
 ```bash
-npm install solana-keychain-mcp @solana/keychain-privy
+npm install @orquestradev/signer-mcp @solana/keychain-privy
 ```
 
 ## MCP Client Config Examples
@@ -64,7 +64,7 @@ npm install solana-keychain-mcp @solana/keychain-privy
   "mcpServers": {
     "solana-signer": {
       "command": "npx",
-      "args": ["-y", "solana-keychain-mcp"],
+      "args": ["-y", "@orquestradev/signer-mcp"],
       "env": {
         "KEYCHAIN_BACKEND": "memory",
         "KEYCHAIN_PRIVATE_KEY": "<base58-or-path-to-keypair.json>"
@@ -81,7 +81,7 @@ npm install solana-keychain-mcp @solana/keychain-privy
   "mcpServers": {
     "solana-signer": {
       "command": "npx",
-      "args": ["-y", "solana-keychain-mcp"],
+      "args": ["-y", "@orquestradev/signer-mcp"],
       "env": {
         "KEYCHAIN_BACKEND": "aws-kms",
         "AWS_KMS_KEY_ID": "arn:aws:kms:us-east-1:...",
@@ -99,7 +99,7 @@ npm install solana-keychain-mcp @solana/keychain-privy
   "mcpServers": {
     "solana-signer": {
       "command": "npx",
-      "args": ["-y", "solana-keychain-mcp"],
+      "args": ["-y", "@orquestradev/signer-mcp"],
       "env": {
         "KEYCHAIN_BACKEND": "privy",
         "PRIVY_APP_ID": "clxxxxxxxxxxxxxxxx",
