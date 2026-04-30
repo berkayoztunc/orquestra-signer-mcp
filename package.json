@@ -1,0 +1,59 @@
+{
+  "name": "@orquestradev/signer-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for signing Solana transactions using @solana/keychain backends — by Orquestra",
+  "type": "module",
+  "bin": {
+    "orquestradev-signer-mcp": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "@solana/keychain-core": "^1.2.0",
+    "@solana/keychain-memory": "^1.2.0",
+    "@solana/transactions": "^6.8.0"
+  },
+  "optionalDependencies": {
+    "@solana/keychain-aws-kms": "^1.2.0",
+    "@solana/keychain-cdp": "^1.2.0",
+    "@solana/keychain-crossmint": "^1.2.0",
+    "@solana/keychain-dfns": "^1.2.0",
+    "@solana/keychain-fireblocks": "^1.2.0",
+    "@solana/keychain-gcp-kms": "^1.2.0",
+    "@solana/keychain-openfort": "^1.2.0",
+    "@solana/keychain-para": "^1.2.0",
+    "@solana/keychain-privy": "^1.2.0",
+    "@solana/keychain-turnkey": "^1.2.0",
+    "@solana/keychain-vault": "^1.2.0"
+  },
+  "keywords": [
+    "solana",
+    "mcp",
+    "model-context-protocol",
+    "signer",
+    "keychain",
+    "transaction",
+    "signing"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.3"
+  }
+}
