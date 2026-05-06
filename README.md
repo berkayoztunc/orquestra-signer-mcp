@@ -111,6 +111,32 @@ npm install @orquestradev/signer-mcp @solana/keychain-privy
 }
 ```
 
+### Claude Code
+
+To add this MCP server to Claude Code, update your MCP configuration:
+
+```bash
+claude code mcp add solana-signer --command npx --args "-y" --args "@orquestradev/signer-mcp" --env KEYCHAIN_BACKEND=memory --env "KEYCHAIN_PRIVATE_KEY=<base58-or-path-to-keypair.json>" --env "SOLANA_RPC_URL=https://api.mainnet-beta.solana.com"
+```
+
+Or manually add to your Claude Code config file:
+
+```json
+{
+  "mcpServers": {
+    "solana-signer": {
+      "command": "npx",
+      "args": ["-y", "@orquestradev/signer-mcp"],
+      "env": {
+        "KEYCHAIN_BACKEND": "memory",
+        "KEYCHAIN_PRIVATE_KEY": "<base58-or-path-to-keypair.json>",
+        "SOLANA_RPC_URL": "https://api.mainnet-beta.solana.com"
+      }
+    }
+  }
+}
+```
+
 ## Development
 
 ```bash
@@ -146,3 +172,6 @@ Accepts `transaction` (base64 wire), optional `rpcUrl`, and optional `skipPrefli
 ## License
 
 MIT
+
+
+
